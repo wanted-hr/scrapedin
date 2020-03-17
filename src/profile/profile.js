@@ -73,7 +73,7 @@ module.exports = async (browser, cookies, url, waitTimeToScrapMs = 500, hasToGet
     volunteerExperience
   }
 
-  browser.close()
+  await browser.close()
   const cleanedProfile = cleanProfileData(rawProfile)
   return cleanedProfile
 }
