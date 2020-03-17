@@ -1,7 +1,7 @@
 {
-  "name": "scrapedin",
-  "version": "1.0.12",
-  "description": "linkedin scraper for 2019 website",
+  "name": "@getwanted/scrapedin",
+  "version": "1.0.13",
+  "description": "linkedin scraper for 2020 website",
   "keywords": [
     "linkedin",
     "scraper"
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/leonardiwagner/scrapedin"
+    "url": "https://github.com/wanted-hr/scrapedin"
   },
   "bugs": {
-    "url": "https://github.com/leonardiwagner/scrapedin/issues"
+    "url": "https://github.com/wanted-hr/scrapedin/issues"
   },
-  "author": "Wagner Leonardi <leonardiwagner@gmail.com>",
+  "author": "M <mario@getwanted.com>",
   "license": "Apache-2.0",
   "dependencies": {
     "puppeteer": "^1.13.0",
