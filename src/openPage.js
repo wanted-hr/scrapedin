@@ -23,6 +23,14 @@ module.exports = async (browser, cookies, url) => {
     height: 1080
   })
 
+  await page.setRequestInterception(true);
+  page.on('request', request => {
+    if (request.isNavigationRequest() && request.redirectChain().length)
+      request.abort();
+    else
+      request.continue();
+  });
+
   await page.goto(url)
 
   return page
