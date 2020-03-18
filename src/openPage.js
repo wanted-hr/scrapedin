@@ -26,7 +26,7 @@ module.exports = async (browser, cookies, url) => {
 
   await useProxy(page, proxy);
 
-  await page.goto(url)
+  await page.goto(url, { timeout: 90000 })
 
   return page
 }

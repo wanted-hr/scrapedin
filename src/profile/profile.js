@@ -14,7 +14,7 @@ module.exports = async (browser, cookies, url, waitTimeToScrapMs = 500, hasToGet
   const page = await openPage(browser, cookies, url)
   const profilePageIndicatorSelector = '.pv-profile-section'
   
-  await page.waitFor(profilePageIndicatorSelector, { timeout: 5000 })
+  await page.waitFor(profilePageIndicatorSelector, { timeout: 10000 })
     .catch(() => {
       logger.warn('profile', 'profile selector was not found')
     })
