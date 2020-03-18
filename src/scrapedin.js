@@ -3,7 +3,7 @@ const login = require('./login')
 const profile = require('./profile/profile')
 const logger = require('./logger')
 
-const QUOTA_GUARD_URL = `http://7mn60dah69jyx2:dx7e285lx4aqaobuaan3b1chsgxy0g@proxy.quotaguard.com:9292`
+const QUOTA_GUARD_URL = `http://proxy.quotaguard.com:9292`
 
 module.exports = async({ cookies, email, password, isHeadless, hasToLog, hasToGetContactInfo, puppeteerArgs } = { isHeadless: true, hasToLog: false }) => {
   if (!hasToLog) {
