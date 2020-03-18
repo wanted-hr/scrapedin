@@ -3,15 +3,13 @@ const login = require('./login')
 const profile = require('./profile/profile')
 const logger = require('./logger')
 
-const QUOTA_GUARD_URL = `http://proxy.quotaguard.com:9292`
-
 module.exports = async({ cookies, email, password, isHeadless, hasToLog, hasToGetContactInfo, puppeteerArgs } = { isHeadless: true, hasToLog: false }) => {
   if (!hasToLog) {
     logger.stopLogging()
   }
   logger.info('scrapedin', 'initializing')
 
-  const args = Object.assign({ headless: isHeadless, args: ['--no-sandbox', `--proxy-server=${QUOTA_GUARD_URL}`] }, puppeteerArgs)
+  const args = Object.assign({ headless: isHeadless, args: ['--no-sandbox'] }, puppeteerArgs)
   const browser = await puppeteer.launch(args)
 
   if(cookies) {

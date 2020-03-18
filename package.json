@@ -1,6 +1,6 @@
 {
   "name": "@getwanted/scrapedin",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "linkedin scraper for 2020 website",
   "keywords": [
     "linkedin",
@@ -24,6 +24,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "puppeteer": "^1.13.0",
+    "puppeteer-page-proxy": "^1.2.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
