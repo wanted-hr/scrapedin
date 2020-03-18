@@ -1,6 +1,4 @@
-import {
-  proxyRequest,
-} from 'puppeteer-proxy';
+const proxy = require('puppeteer-proxy').proxyRequest 
 
 const proxyUrl = `http://7mn60dah69jyx2:dx7e285lx4aqaobuaan3b1chsgxy0g@proxy.quotaguard.com:9292`
 const agents = [
@@ -28,9 +26,8 @@ module.exports = async (browser, cookies, url) => {
   })
 
   await page.setRequestInterception(true);
-
   page.on('request', async (request) => {
-    await proxyRequest({
+    await proxy({
       page,
       proxyUrl: proxyUrl,
       request,
