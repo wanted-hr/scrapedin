@@ -1,6 +1,3 @@
-const proxy = require('puppeteer-proxy').proxyRequest 
-
-const proxyUrl = `http://7mn60dah69jyx2:dx7e285lx4aqaobuaan3b1chsgxy0g@proxy.quotaguard.com:9292`
 const agents = [
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
     //"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36",
@@ -24,15 +21,6 @@ module.exports = async (browser, cookies, url) => {
     width: 1920,
     height: 1080
   })
-
-  await page.setRequestInterception(true);
-  page.on('request', async (request) => {
-    await proxy({
-      page,
-      proxyUrl: proxyUrl,
-      request,
-    });
-  });
 
   await page.goto(url, { timeout: 90000 })
 
