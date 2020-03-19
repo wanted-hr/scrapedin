@@ -59,7 +59,7 @@ module.exports = async (browser, cookies, url, waitTimeToScrapMs = 500, hasToGet
   }
 
   await browser.close()
-  console.log(rawProfile)
+  
   const cleanedProfile = cleanProfileData(rawProfile)
   return cleanedProfile
 }
